@@ -1,3 +1,5 @@
 export default function Home() {
-  return null;
+  return <div className="bg-red-500">
+    <h1 className="text-black">It works!</h1>
+  </div>;
 }
