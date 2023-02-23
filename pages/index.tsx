@@ -21,7 +21,7 @@ export default function Home() {
         Checkout
       </button>
     </div>
-    <div className="bg-white overflow-hidden rounded-3xl shadow-xl">
+    <div className="bg-white overflow-hidden rounded-3xl shadow-xl group">
       <div className="bg-blue-500 p-6 pb-14">
         <span className="text-white text-2xl">Profile</span>
       </div>
@@ -31,11 +31,11 @@ export default function Home() {
             <span className="text-sm text-gray-500">Oders</span>
             <span className="font-medium">$340</span>
           </div>
-          <div className="h-24 w-24 bg-red-400 rounded-full" />
+          <div className="h-24 w-24 bg-red-400 rounded-full group-hover:bg-red-300 transition-colors" />
           <div className="flex flex-col items-center">
             <span className="text-sm text-gray-500">Spent</span>
             <span className="font-medium">$340</span>
-          </div>
+          </div> 
         </div>
         <div className="relative flex flex-col items-center -mt-10 -mb-5">
           <span className="text-lg font-medium">Tony Molly</span>
@@ -73,6 +73,17 @@ export default function Home() {
         </div>
       </div>
     </div>
+      <form className="flex flex-col space-y-2 p-5 bg-blue-200 focus-within:bg-blue-100">
+      <input
+        type="text"
+        required
+        placeholder="Username"
+        className="border p-1 peer border-gray-400 rounded-md"
+      />
+      <span className="hidden peer-invalid:block peer-invalid:text-red-400">This input is invalid</span>
+      <span className="hidden peer-hover:block peer-valid:text-teal-600">hi</span>
+      <input type="submit" value="Login" className="bg-white" />
+    </form>
   </div>;
 }
  
