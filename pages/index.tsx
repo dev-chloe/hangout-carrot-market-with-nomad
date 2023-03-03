@@ -1,23 +1,20 @@
 export default function Home() {
-  return <div className="bg-slate-400 xl:place-content-center py-20 px-10 grid gap-10 min-h-screen lg:grid-cols-2 xl:grid-cols-3">
-    <div className="bg-white p-6 rounded-3xl shadow-xl flex flex-col justify-between">
-      <span className="font-semibold text-3xl">Select Item</span>
+  return <div className="dark bg-slate-400 xl:place-content-center py-20 px-10 grid gap-10 min-h-screen lg:grid-cols-2 xl:grid-cols-3">
+    <div className="bg-white dark:bg-black p-6 rounded-3xl shadow-xl flex flex-col justify-between">
+      <span className="font-semibold text-3xl dark:text-white">Select Item</span>
       <ul> 
         {[1, 2, 3, 4].map((i) => (
-          <li key={i} className="flex justify-between my-2 odd:bg-blue-50 even:bg-red-300">
-            <span className="text-gray-500">Grey Chair</span>
-            <span className="font-semibold">$19</span>
+          <li key={i} className="flex justify-between my-2">
+            <span className="text-gray-500 dark:text-gray-100">Grey Chair</span>
+            <span className="font-semibold dark:text-white">$19</span>
           </li>
         ))}
-      </ul>
-      <ul>
-        {["a", "b", "c", ""].map((c, i) => <li className="bg-red-500 py-2 empty:hidden" key={i}>{c}</li>)}
       </ul>
       <div className="mt-2 pt-2 border-t-2 border-dashed border-gray-300 flex justify-between">
         <span>Total</span>
         <span className="font-semibold">$19</span>
       </div>
-      <button className="flex mt-5 bg-blue-500 text-white p-3 justify-center rounded-xl w-2/4 mx-auto hover:bg-teal-500 hover:text-black active:bg-yellow-500 focus:bg-red-500">
+      <button className="dark:bg-black dark:border-white dark:border dark:hover:bg-white dark:hover:text-black flex mt-5 bg-blue-500 text-white p-3 justify-center rounded-xl w-2/4 mx-auto hover:bg-teal-500 hover:text-black active:bg-yellow-500 focus:bg-red-500">
         Checkout
       </button>
     </div>
