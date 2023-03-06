@@ -49,7 +49,7 @@ export default function Home() {
           </div>
         </div>
       ))}
-      <button className="fixed hover:bg-orange-500 cursor-pointer bottom-10 right-5 bg-orange-400 shadow-xl rounded-full p-4 text-white">
+      <button className="border-transparent fixed hover:bg-orange-500 cursor-pointer bottom-10 right-5 bg-orange-400 shadow-xl rounded-full p-4 text-white">
         <svg
           className="h-6 w-6"
           xmlns="http://www.w3.org/2000/svg"
