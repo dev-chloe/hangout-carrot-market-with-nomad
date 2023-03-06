@@ -20,16 +20,16 @@ export default function Enter() {
           </div>
         </div>
         <form className="flex flex-col mt-8">
-          <label className="text-sm font-medium text-gray-700 ">
+          <label htmlFor="input" className="text-sm font-medium text-gray-700">
             {method === "email" ? "Email address" : null}
             {method === "phone" ? "Phone number" : null}
           </label>
           <div className="mt-1">
-            {method === "email" ? <input type="email" className="px-3 py-2 border border-gray-300 accent-purple-900 w-full rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-orange-200 focus:border-orange-300" required /> : null}
+            {method === "email" ? <input id="input" type="email" className="px-3 py-2 border border-gray-300 accent-purple-900 w-full rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-orange-200 focus:border-orange-300" required /> : null}
             {method === "phone" ? (
               <div className="flex rounded-md shadow-sm">
                 <span className="flex justify-center items-center px-3 rounded-l-md border-r-0 border border-gray-300 bg-gray-50 text-gray-500 text-sm">+82</span>
-                <input type="number" className="px-3 py-2 border border-gray-300 accent-purple-900 w-full rounded-md rounded-l-none shadow-sm placeholder-gray-400 focus:outline-none focus:ring-orange-200 focus:border-orange-300" required />
+                <input id="input" type="number" className="px-3 py-2 border border-gray-300 accent-purple-900 w-full rounded-md rounded-l-none shadow-sm placeholder-gray-400 focus:outline-none focus:ring-orange-200 focus:border-orange-300" required />
               </div>
             ) : null}
           </div>
