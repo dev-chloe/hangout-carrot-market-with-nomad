@@ -9,7 +9,7 @@ interface LayoutProps {
   children: React.ReactNode;
 }
 
-export default function Layout ({
+export default function Layout({
   title,
   canGoBack,
   hasTabBar,

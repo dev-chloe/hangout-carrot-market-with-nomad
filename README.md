@@ -52,3 +52,5 @@ npm run dev
 3. [Autoprefixer](https://github.com/postcss/autoprefixer)
 
     > 마크업 할 때 일부 브라우저에서 적용되지 않는 css 속성의 앞에 -mz-, -webkit- 등의 접두사를 자동으로 접두사를 붙여준다는 확장프로그램
+4. [Prisma](https://www.prisma.io/)
+    > Node.js와 Typescript ORM(Object Realtional Mapping)로 Javascript나 Typescript 와 database 를 SQL 코드를 쓰지 않고 연결해주는 라이브러리
