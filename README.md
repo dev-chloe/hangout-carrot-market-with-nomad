@@ -66,4 +66,24 @@ npm run dev
 
 5. [Planetscale](https://planetscale.com/)
     > 서버를 따로 관리하거나 유지보수 할 필요가 없는 database 플랫폼
-  
+
+    ```bash
+    # Install Planetscale
+    brew install planetscale/tap/pscale
+
+    # Install MySQL-client
+    brew install mysql-client
+
+    # login
+    pscale auth login
+
+    # check region 
+    pscale region list 
+
+    # create database
+    pscale database create <database> --region <region>
+    pscale database create carrot-market --region ap-northeast 
+
+    # connect database
+    pscale connect carrot-market
+    ```
