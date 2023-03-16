@@ -87,3 +87,37 @@ npm run dev
     # connect database
     pscale connect carrot-market
     ```
+
+    - 일반적인 MySQL, PostgresQL은 지원하는 foreign key constraint를 Vitess는 지원하지 않음
+    - Scaling을 위해 데이터를 분산하기 때문임
+    - 따라서 이 작업은 Prisma에서 수행시키도록 작성
+
+    ```javascript
+     // v4.5 이하
+    generator client {
+      provider = "prisma-client-js"
+      previewFeatures = ["referentialIntegrity"]
+    }
+    datasource db {
+      provider = "mysql"
+      url = env("DATABASE_URL")
+      referentialIntegrity = "prisma"
+    }
+
+     // v4.5 이상
+     generator client {
+      provider = "prisma-client-js"
+    }
+    datasource db {
+      provider     = "mysql"
+      url          = env("DATABASE_URL")
+      relationMode = "prisma"
+    }
+    ```
+
+    ```bash
+    # 위 설정이 끝난후 
+    # pscale connect가 되어 있는 상태에서 
+    # push db
+    npx prisma db push
+    ```
