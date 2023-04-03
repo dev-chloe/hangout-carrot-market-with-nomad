@@ -121,3 +121,16 @@ npm run dev
     # push db
     npx prisma db push
     ```
+
+6. [Prisma Client](https://www.prisma.io/client)
+
+    ```bash
+    npm install @prisma/client
+    ```
+
+7. [Prisma Studio](https://www.prisma.io/studio)
+    > Prisma가 제공해주는 데이터를 확인하는 관리자  패널
+
+    ```bash
+    npx prisma studio
+    ```
