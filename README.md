@@ -134,3 +134,10 @@ npm run dev
     ```bash
     npx prisma studio
     ```
+
+8. [React Hook Form](https://react-hook-form.com/)
+    > React에서 form의 유효성을 검사하는 데 도움이 되는 라이브러리
+
+    ```bash
+    npm install react-hook-form
+    ```
