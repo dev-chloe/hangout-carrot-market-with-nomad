@@ -4,14 +4,17 @@ interface LoginForm {
   username: string;
   password: string;
   email: string;
+  error?: string
 }
 
 export default function Forms() {
-  const {register, handleSubmit, formState: { errors }} = useForm<LoginForm>({
-    mode: "onChange"
+  const {register, handleSubmit, formState: { errors }, reset, resetField} = useForm<LoginForm>({
+    mode: "onSubmit"
   });
   const onValid = (data: LoginForm) => {
-    console.log(1)
+    console.log("I'm valid!")
+    // reset();
+    resetField("password")
   }
   const onInvalid = (errors: FieldErrors) => {
     console.log(errors)
@@ -51,6 +54,7 @@ export default function Forms() {
       />
       {errors.password?.message}
       <input type="submit" value="Create Account" />
+      {errors.error?.message}
     </form>
   )
 }
