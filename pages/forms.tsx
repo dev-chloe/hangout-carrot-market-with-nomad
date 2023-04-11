@@ -8,12 +8,11 @@ interface LoginForm {
 }
 
 export default function Forms() {
-  const {register, handleSubmit, formState: { errors }, reset, resetField} = useForm<LoginForm>({
+  const {register, handleSubmit, formState: { errors }, resetField} = useForm<LoginForm>({
     mode: "onSubmit"
   });
   const onValid = (data: LoginForm) => {
     console.log("I'm valid!")
-    // reset();
     resetField("password")
   }
   const onInvalid = (errors: FieldErrors) => {
