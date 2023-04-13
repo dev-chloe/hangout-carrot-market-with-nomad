@@ -9,12 +9,8 @@ export default function useMutaion(url: string): [
     data: undefined,
     error: undefined,
   })
-  // const [loading, setLoading] = useState(false);
-  // const [data, setData] = useState<undefined | any>(undefined);
-  // const [error, setError] = useState<undefined | any>(undefined);
   function mutation(data: any) {
     setState((prev) => ({...prev, loading: true}))
-    // setLoading(true);
     fetch(url, {
       method: "POST",
       headers: {
@@ -26,9 +22,6 @@ export default function useMutaion(url: string): [
     .then((data) => setState((prev) => ({...prev, data})))
     .catch((error) => setState((prev) => ({...prev, error})))
     .finally(() => setState((prev) => ({...prev, loading: false})));
-    // .then(setData)
-    // .catch(setError).finally(() => setLoading(false))
   }
   return [mutation, { ...state }]
-  // return [mutation, { loading, data, error }]
 }
