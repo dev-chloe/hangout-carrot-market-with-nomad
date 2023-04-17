@@ -149,6 +149,13 @@ npm run dev
     npm install twilio 
     ```
 
+9. [Iron-session](https://github.com/vvo/iron-session)
+    > 데이터를 저장하기 위해 서명되고 암호화된 쿠키를 사용하는 Node.js stateless session 유틸리티
+
+    ```bash
+    npm install iron-session
+    ```
+
 ## Study
 
 1. Uploading JSON data

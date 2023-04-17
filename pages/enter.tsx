@@ -22,7 +22,6 @@ interface MutationResult {
 const Enter: NextPage = () => {
   const [enter, {loading, data, error}] = useMutaion<MutationResult>("/api/users/enter");
   const [confirmToken, {loading:tokenLoading, data:tokenData}] = useMutaion<MutationResult>("/api/users/confirm");
-  const [submitting, setSubmitting] = useState(false);
   const { register, handleSubmit, reset } = useForm<EnterForm>()
   const { register:tokenRegister, handleSubmit:tokenHandleSubmit} = useForm<TokenForm>();
   const [method, setMethod] = useState<"email" | "phone">("email");

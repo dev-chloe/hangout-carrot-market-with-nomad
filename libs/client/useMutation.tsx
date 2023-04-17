@@ -2,7 +2,7 @@ import { useState } from "react"
 
 interface useMutationState<T> {
   loading: boolean;
-  data?: {ok: boolean};
+  data?: T;
   error?: object;
 }
 
