@@ -159,9 +159,8 @@ npm run dev
 ## Study
 
 1. Uploading JSON data
-
-> POST프로토콜로 JSON인코딩된 데이터를 보내기 위해 fetch()를 사용한다.
-> body의 데이터 유형은 반드시 "Content-Type" 헤더와 일치해야 한다.
+    > POST프로토콜로 JSON인코딩된 데이터를 보내기 위해 fetch()를 사용한다.
+    > body의 데이터 유형은 반드시 "Content-Type" 헤더와 일치해야 한다.
 
 ```javascript
 await fetch(url, {
@@ -181,3 +180,10 @@ await fetch(url, {
 
 - headers에 "Content-Type"를 json으로 하고 req.body.email를 출력
 [![without "Content-Type"](public/screenshot/check_email_with_conten-type.png)]
+
+2. [NextAuth](https://next-auth.js.org/)
+    > Next.js에서 Authentication 구현을 도와주는 패키지
+
+    ```bash
+    npm i next-auth
+    ```
