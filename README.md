@@ -183,6 +183,7 @@ await fetch(url, {
 
 2. [NextAuth](https://next-auth.js.org/)
     > Next.js에서 Authentication 구현을 도와주는 패키지
+    > 여기서는 사용하지 않지만 빠르게 구현하는데 도움이 될 수 있어 남겨둠
 
     ```bash
     npm i next-auth
