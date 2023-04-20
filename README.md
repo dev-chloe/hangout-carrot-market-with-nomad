@@ -149,11 +149,22 @@ npm run dev
     npm install twilio 
     ```
 
-9. [Iron-session](https://github.com/vvo/iron-session)
+10. [Iron-session](https://github.com/vvo/iron-session)
     > 데이터를 저장하기 위해 서명되고 암호화된 쿠키를 사용하는 Node.js stateless session 유틸리티
 
     ```bash
     npm install iron-session
+    ```
+
+11. [SWR](https://swr.vercel.app/ko)
+    > SWR은 먼저 캐시로부터 데이터를 반환한 후, fetch 요청(재검증)을 하고, 최종적으로 최신화된 데이터를 가져오는 전략
+    > SWR을 사용하면 컴포넌트는 지속적이며 자동으로 데이터 업데이트 스트림을 받게 됨
+    > React Query와 비슷이 비슷하고 React Query가 전반적으로 좋으나 패키지 크기가 SWR보다 큼
+    > 이로 인해 간단한 어플리케이션을 만들 때는 SWR이 유리
+    > 많은 커스텀 기능이 필요하면 React Query이 유리
+
+    ```bash
+    npm install swr
     ```
 
 ## Study
