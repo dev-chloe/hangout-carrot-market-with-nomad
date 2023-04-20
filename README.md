@@ -162,24 +162,24 @@ npm run dev
     > POST프로토콜로 JSON인코딩된 데이터를 보내기 위해 fetch()를 사용한다.
     > body의 데이터 유형은 반드시 "Content-Type" 헤더와 일치해야 한다.
 
-```javascript
-await fetch(url, {
-  method: "POST", // *GET, POST, PUT, DELETE 등
-  body: JSON.stringify(data), // data can be `string` or {object}!
-  headers:{
-    "Content-Type": "application/json"
-  }
-})
-```
+    ```javascript
+    await fetch(url, {
+      method: "POST", // *GET, POST, PUT, DELETE 등
+      body: JSON.stringify(data), // data can be `string` or {object}!
+      headers:{
+        "Content-Type": "application/json"
+      }
+    })
+    ```
 
-- headers에 "Content-Type" 없이 req.body를 출력
-[![without "Content-Type"](public/screenshot/without_conten-type.png)]  
+    - headers에 "Content-Type" 없이 req.body를 출력
+    [![without "Content-Type"](public/screenshot/without_conten-type.png)]  
 
-- headers에 "Content-Type" 없이 req.body.email는 출력 되지 않음
-[![without "Content-Type"](public/screenshot/check_email_without_conten-type.png)]
+    - headers에 "Content-Type" 없이 req.body.email는 출력 되지 않음
+    [![without "Content-Type"](public/screenshot/check_email_without_conten-type.png)]
 
-- headers에 "Content-Type"를 json으로 하고 req.body.email를 출력
-[![without "Content-Type"](public/screenshot/check_email_with_conten-type.png)]
+    - headers에 "Content-Type"를 json으로 하고 req.body.email를 출력
+    [![without "Content-Type"](public/screenshot/check_email_with_conten-type.png)]
 
 2. [NextAuth](https://next-auth.js.org/)
     > Next.js에서 Authentication 구현을 도와주는 패키지
@@ -188,3 +188,15 @@ await fetch(url, {
     ```bash
     npm i next-auth
     ```
+
+3. `replace()` vs  `push()`
+
+    ```javascript
+    // 뒤로가기를 했을 때 히토리가 남는다.
+    router.push("/somewhere")
+
+    // 뒤로가기를 했을 때 히토리가 남지 않는다.
+    router.replace("/somewhere")
+    ```
+
+    [Next.js router 참고 문헌](https://nextjs.org/docs/api-reference/next/router#routerpush)
