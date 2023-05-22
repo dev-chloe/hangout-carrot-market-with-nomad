@@ -9,7 +9,7 @@ import useSWR from "swr";
 
 interface ProductWithCount extends Product {
   _count: {
-    fav: number;
+    favs: number
   };
 }
 interface ProductsResponse {
@@ -32,7 +32,7 @@ const Home: NextPage = () => {
             title={product.name}
             price={product.price}
             comments={1}
-            hearts={product._count.fav}
+            hearts={product._count.favs}
           />
         ))}
         <FloatingButton href="/products/upload">
