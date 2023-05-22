@@ -1,6 +1,6 @@
 import Button from "@/components/button";
 import Input from "@/components/input";
-import useMutaion from "@/libs/client/useMutation";
+import useMutation from "@/libs/client/useMutation";
 import { cls } from "@/libs/client/utils";
 import { NextPage } from "next";
 import { useRouter } from "next/router";
@@ -21,8 +21,8 @@ interface MutationResult {
 }
 
 const Enter: NextPage = () => {
-  const [enter, {loading, data, error}] = useMutaion<MutationResult>("/api/users/enter");
-  const [confirmToken, {loading:tokenLoading, data:tokenData}] = useMutaion<MutationResult>("/api/users/confirm");
+  const [enter, {loading, data, error}] = useMutation<MutationResult>("/api/users/enter");
+  const [confirmToken, {loading:tokenLoading, data:tokenData}] = useMutation<MutationResult>("/api/users/confirm");
   const { register, handleSubmit, reset } = useForm<EnterForm>()
   const { register:tokenRegister, handleSubmit:tokenHandleSubmit} = useForm<TokenForm>();
   const [method, setMethod] = useState<"email" | "phone">("email");

@@ -2,7 +2,7 @@ import Button from "@/components/button";
 import Input from "@/components/input";
 import Layout from "@/components/layout";
 import TextArea from "@/components/textarea";
-import useMutaion from "@/libs/client/useMutation";
+import useMutation from "@/libs/client/useMutation";
 import { Product } from "@prisma/client";
 import { NextPage } from "next";
 import { useRouter } from "next/router";
@@ -23,7 +23,7 @@ interface UploadProductMutation {
 const Upload: NextPage = () => {
   const router = useRouter();
   const { register, handleSubmit } = useForm<UploadProductForm>();
-  const [uploadProduct, {loading, data}] = useMutaion<UploadProductMutation>("/api/products")
+  const [uploadProduct, {loading, data}] = useMutation<UploadProductMutation>("/api/products")
   const onValid = (data: UploadProductForm) => {
     if (loading) return
     uploadProduct(data)

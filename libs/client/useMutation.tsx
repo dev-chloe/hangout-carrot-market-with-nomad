@@ -11,7 +11,7 @@ type useMutationResult<T> = [
   useMutationState<T>
 ]
 
-export default function useMutaion<T = any>(url: string): useMutationResult<T> {
+export default function useMutation<T = any>(url: string): useMutationResult<T> {
   const [state, setState] = useState<useMutationState<T>>({
     loading: false,
     data: undefined,
