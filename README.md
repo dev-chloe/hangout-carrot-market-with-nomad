@@ -212,6 +212,6 @@ npm run dev
 
     [Next.js router 참고 문헌](https://nextjs.org/docs/api-reference/next/router#routerpush)
 
-3. `bound mutate` vs  `unbound mutate`
+4. `bound mutate` vs  `unbound mutate`
     - bound mutate: 해당 화면에서 얻은 데이터만 변경하기를 원할 때 사용
     - unbound mutate: 다른 화면의 데이터를 변경하기를 원할 때 사용
